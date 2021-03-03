@@ -2,7 +2,7 @@
 
 namespace UK_Postcode.Models
 {
-    public class Postcode
+    public class PostcodeDTO
     {
         [JsonPropertyName("status")]
         public int Status { get; set; }

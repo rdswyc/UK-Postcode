@@ -14,6 +14,7 @@ namespace UK_Postcode
         {
             services.AddControllers();
             services.AddHttpClient<PostcodeService>();
+            services.AddSingleton<DistanceService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
