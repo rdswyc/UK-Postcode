@@ -20,11 +20,14 @@
   <div class="container mt-5" ng-controller="Controller as controller">
     <h1>UK Postcode</h1>
 
-    <div class="form-group">
-      <label for="postCode">Type the postcode to find it's address and distance to the London Heathrow airport</label>
-      <input type="text" class="form-control" ng-model="controller.postCode" id="postCode" placeholder="Enter the postcode here">
-    </div>
-    <button type="submit" class="btn btn-primary" ng-disabled="!controller.postCode" ng-click="controller.getAddress()">Submit</button>
+    <form>
+      <div class="form-group">
+        <label for="postCode">Type the postcode to find it's address and distance to the London Heathrow airport</label>
+        <input type="text" class="form-control" ng-model="controller.postCode" id="postCode" placeholder="Enter the postcode here">
+        <small class="form-text text-danger" ng-if="controller.error">Postcode not found!</small>
+      </div>
+      <button type="submit" class="btn btn-primary" ng-disabled="!controller.postCode" ng-click="controller.getAddress()">Submit</button>
+    </form>
     <hr>
 
     <div class="row">
